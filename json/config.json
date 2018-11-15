@@ -1,0 +1,12 @@
+{
+    "apiConfig":
+    {
+        "latitude":null,
+        "longitude":null
+    },
+    "vsCodeConfig":
+    {
+        "lightTheme": "Default Light+",
+        "darkTheme": "Default Dark+"
+    }
+}
