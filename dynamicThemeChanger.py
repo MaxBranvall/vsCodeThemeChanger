@@ -71,7 +71,7 @@ def main():
 
     currentTime = strftime('%I:%M%p', gmtime())
 
-    if iteration == 4:
+    if iteration == 0:
 
         now = datetime.now()
         todaysDate = (f'{now.month}/{now.day}/{now.year}')
