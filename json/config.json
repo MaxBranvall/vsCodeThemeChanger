@@ -1,8 +1,8 @@
 {
     "apiConfig":
     {
-        "latitude": 35.9765,
-        "longitude": -85.1939
+        "latitude":null,
+        "longitude":null
     },
     "vsCodeConfig":
     {
