@@ -9,6 +9,8 @@ sunriseTime = 0
 sunsetTime = 0
 currentTime = 0
 
+evaluated = False
+
 settingsJSON = '../../Library/Application Support/Code/User/settings.json'
 configJSON = 'json/config.json'
 
@@ -65,11 +67,11 @@ def compareTimes(currentTime, sunriseTime, sunsetTime):
 
 def main():
 
-    global iteration, sunriseTime, sunsetTime, currentTime
+    global iteration, sunriseTime, sunsetTime, currentTime, evaluated
 
     currentTime = strftime('%I:%M%p', gmtime())
 
-    if iteration == 0:
+    if iteration == 4:
 
         now = datetime.now()
         todaysDate = (f'{now.month}/{now.day}/{now.year}')
@@ -88,8 +90,9 @@ def main():
 
         iteration += 1
 
-    if (currentTime == '06:00 AM'):
+    if (currentTime == '06:00AM' and evaluated == False):
 
+        print('yes')
         now = datetime.now()
         todaysDate = (f'{now.month}/{now.day}/{now.year}')
 
@@ -105,7 +108,9 @@ def main():
         print(f'Date: {todaysDate}\n')
         print(f'Sunrise: {cstSunrise} AM\nSunset: {cstSunset} PM\n')
 
-    elif (currentTime != '06:00 AM'):
+        evaluated = True
+
+    elif (currentTime != '06:00AM'):
         compareTimes(currentTime, sunriseTime, sunsetTime)
 
 while True:
