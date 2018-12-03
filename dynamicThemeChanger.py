@@ -14,7 +14,7 @@ evaluated = False
 settingsJSON = '../../Library/Application Support/Code/User/settings.json'
 configJSON = 'json/config.json'
 
-sunsetSunriseURL = (f'https://api.sunrise-sunset.org/json')
+sunsetSunriseURL = ('https://api.sunrise-sunset.org/json')
 
 with open(configJSON, 'r') as x:
     items = json.load(x)
@@ -92,7 +92,6 @@ def main():
 
     if (currentTime == '06:00AM' and evaluated == False):
 
-        print('yes')
         now = datetime.now()
         todaysDate = (f'{now.month}/{now.day}/{now.year}')
 
@@ -105,6 +104,7 @@ def main():
         cstSunset = int(sunsetTime[:2]) - 6
         cstSunset = str(cstSunset) + sunsetTime[2:-2]
 
+        print('\n' * 50)
         print(f'Date: {todaysDate}\n')
         print(f'Sunrise: {cstSunrise} AM\nSunset: {cstSunset} PM\n')
 
