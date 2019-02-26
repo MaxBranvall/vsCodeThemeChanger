@@ -44,7 +44,11 @@ class Main:
         self.currentTime = self._getCurrentTime()
 
         self._setConfig()
+<<<<<<< HEAD
         # self.getSunriseSunset(self.latitude, self.longituide)
+=======
+        self.getSunriseSunset(self.latitude, self.longituide)
+>>>>>>> 8a6e479791f633ebedeccb78d5511676cc378ebc
 
     def _setConfig(self):
         """
